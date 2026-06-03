@@ -28,4 +28,4 @@ This project demonstrates SQL-based analysis on an ecommerce dataset.
 - Output Screenshots
 
 ## Author
-Vineeth Kumar
+Vineeth Kumar D
