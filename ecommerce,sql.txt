@@ -1,0 +1,41 @@
+SELECT COUNT(*) AS total_rows FROM ecommerce;
+
+SELECT * FROM ecommerce LIMIT 10;
+
+SELECT * FROM ecommerce WHERE rating = 5 LIMIT 10;
+
+SELECT product_name, unit_price
+FROM ecommerce
+ORDER BY unit_price DESC
+LIMIT 10;
+
+SELECT category,
+COUNT(*) AS total_products
+FROM ecommerce
+GROUP BY category;
+
+SELECT AVG(unit_price) AS average_price
+FROM ecommerce;
+
+SELECT category,
+SUM(quantity) AS total_quantity
+FROM ecommerce
+GROUP BY category;
+
+SELECT product_name, unit_price
+FROM ecommerce
+WHERE unit_price >
+(
+SELECT AVG(unit_price)
+FROM ecommerce
+)
+LIMIT 10;
+
+SELECT * FROM expensive_products LIMIT 10;
+
+CREATE INDEX idx_category
+ON ecommerce(category);
+
+SELECT name
+FROM sqlite_master
+WHERE type = 'index';
