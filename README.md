@@ -24,7 +24,6 @@ This project demonstrates SQL-based analysis on an ecommerce dataset.
 
 ## Files
 - ecommerce.sql
-- ecommerce.db
 - Output Screenshots
 
 ## Author
